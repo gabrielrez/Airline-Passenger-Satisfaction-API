@@ -26,10 +26,7 @@ def predict(data: dict):
     df = df.reindex(columns=model_columns, fill_value=0)
 
     pred = model.predict(df)[0]
-    proba = model.predict_proba(df)[0][1]
 
     return {
-        "prediction": int(pred),
-        "satisfaction": "satisfied" if pred == 1 else "neutral or dissatisfied",
-        "probability": float(proba)
+        "satisfaction": "satisfied" if pred == 1 else "neutral or dissatisfied"
     }
