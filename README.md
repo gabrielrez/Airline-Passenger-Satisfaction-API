@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 4. Rode o servidor
 ```
-uvicorn main:app --reload
+python -m uvicorn main:app --reload
 ```
 
 5. Acesse http://127.0.0.1:8000/docs
